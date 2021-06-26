@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="every"></div>
+    <script>
+        let age = [24,54,60,23,40,10,14];
+        let lst = [];
+        console.log(age.every(ages=>ages>18))
+        async function check(item){
+            if(item<18){
+            lst.push(item);
+            }
+            return item<18
+        }
+        document.querySelector('.every').innerHTML=age.every(check)+" "+lst;
+        // document.querySelector('.every').innerHTML=age.every(ages=>ages>18);
+    </script>
+</body>
+</html>

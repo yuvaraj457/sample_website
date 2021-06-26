@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content"></div>
+    <script>
+        let fruits = ['Apple','Orange','Banana','Fig']
+        fruits.push('strawberry');
+        var list = '';
+        fruits.forEach(function(item,index,array){
+            list = list+"<li>"+item+" "+index+"</li>"
+        });
+        document.querySelector('.content').innerHTML="<ul>"+list+"</ul>";
+    </script>
+</body>
+</html>
