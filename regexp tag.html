@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var text = "Hello1 Hello2 World!!!",
+        pattern1 = /Hello\d\s/,
+        result1 = pattern1.exec(text);
+        console.log(result1[0]);
+        console.log(result1[0]);
+
+        let pattern2 = /Hello\d\s/g,
+        result2 = pattern2.exec(text);
+        console.log(result2[0]);
+
+        let pattern3 = /Hello\d\s/y,
+        result3 = pattern3.exec(text);
+        console.log(result3[0]);
+
+        console.log(pattern1.lastIndex);
+        console.log(pattern2.lastIndex);
+        console.log(pattern3.lastIndex);
+
+        pattern1.lastIndex = 1;
+        pattern2.lastIndex = 1;
+        pattern3.lastIndex = 1;
+        result1 = pattern1.exec(text);
+        result2 = pattern2.exec(text);
+        result3 = pattern3.exec(text);
+        console.log(result1[0]);
+        console.log(result2[0]);
+        console.log(result3[0]);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = {
+            name:"yuvaraj",
+            sayname(){
+                return this.name;
+            },
+            sayname2:()=>this.name  //arrow function returns nothing
+        }
+        let person = Object.create(a);
+        console.log(person.name);
+        a.name = 'xyz';
+        console.log(person.name);
+        console.log(person.sayname());
+        console.log(person.sayname2());
+
+
+        let b = {
+            name:"yuvaraj",
+            sayname(){
+                return this.name;
+            },
+        }
+        var receiver = {};
+        Object.setPrototypeOf(receiver,b);
+        console.log(receiver.name);
+        console.log(receiver.sayname());
+        b.name = 'Raj';
+        console.log(receiver.name);
+        console.log(Object.getPrototypeOf(receiver) === b);
+    </script>
+</body>
+</html>
