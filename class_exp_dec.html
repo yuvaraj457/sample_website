@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    class square {
+        constructor(height, width) {
+          this.side1 = height;
+          this.side2 = width;
+        }
+        area(){
+            return this.side1*this.side2;
+        }
+      }
+      console.log(new square(5,5).area());
+
+    //getter
+    console.log('getter');
+      const obj = {
+             log: ['example','test'],
+                get latest() {
+            if (this.log.length === 0) return undefined;
+            return this.log[this.log.length - 1];
+                }
+            }
+            console.log(obj.latest); 
+            delete obj.latest;   //we can delete getter
+            console.log(obj.latest);  
+
+    //setter
+    console.log('setter');
+    const obj2={
+        set latest(names){
+            this.log.push(names);
+        },
+        log:[]
+        };
+        obj2.latest = 'Yuvaraj';
+        obj2.latest = 'Raj';
+        console.log(obj2.log);
+    </script>
+</body>
+</html>

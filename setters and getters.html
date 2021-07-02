@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = {
+            color : 'blue',
+            type : 'toyato',
+            get defcolor(){
+                return this.color; 
+            },
+            get deftype(){
+                return this.type;
+            },
+            set defcolor(newcolor){
+                return this.color;
+            },
+            set deftype(newtype){
+                return this.type;
+            }
+        }
+        console.log(obj.defcolor);
+        obj.color = 'Red';
+        console.log(obj.defcolor);
+    </script>
+</body>
+</html>

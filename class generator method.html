@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class employe{
+            constructor(...username){
+                this.username = username;
+            }
+            *getnames(){
+                for(const user of this.username){
+                    yield user;
+                }
+            }
+        }
+        let emp1 = new employe('Yuvaraj','Raj','Yuva');
+        let f = emp1.getnames();
+        console.log(f.next().value);
+        console.log([...f])
+    </script>
+</body>
+</html>
